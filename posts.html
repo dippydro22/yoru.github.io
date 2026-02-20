@@ -1,0 +1,21 @@
+---
+layout: default
+title: All Posts
+---
+
+<section class="card posts-page">
+  <h1>All Posts</h1>
+  <ul class="post-list">
+    {% assign all_posts = site.posts | sort: "date" | reverse %}
+    {% for post in all_posts %}
+    <li class="post-item">
+      <time>{{ post.date | date: "%Y.%m.%d" }}</time><br />
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+    {% if all_posts.size == 0 %}
+    <li class="post-item">아직 작성된 포스트가 없습니다.</li>
+    {% endif %}
+  </ul>
+  <a class="back-link" href="{{ '/' | relative_url }}">← Back to Home</a>
+</section>
