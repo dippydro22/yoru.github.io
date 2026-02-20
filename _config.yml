@@ -13,3 +13,12 @@ repository: dippydro22/dippydro22.github.io
 
 url: "https://dippydro22.github.io"
 baseurl: ""
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      category: info

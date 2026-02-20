@@ -113,3 +113,66 @@ body {
 .back-link { display: inline-block; margin-top: 14px; color: #ffc9c9; text-decoration: none; }
 
 @media (max-width:860px){ .layout{ grid-template-columns:1fr; } }
+
+
+.career-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.career-role {
+  color: #ffeaea;
+  text-shadow: 0 0 11px rgba(255, 91, 91, 0.5);
+}
+.career-period {
+  color: #8ec8ff;
+  text-shadow: 0 0 12px rgba(59,130,246,.5);
+}
+.career-item::before {
+  content: "◆";
+  margin-right: 8px;
+  color: #ff7b7b;
+}
+
+.post-type-badge {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .3px;
+  border: 1px solid transparent;
+}
+.post-type-badge.diary {
+  color: #86efac;
+  background: rgba(22,163,74,.18);
+  border-color: rgba(134,239,172,.45);
+}
+.post-type-badge.info {
+  color: #93c5fd;
+  background: rgba(30,64,175,.22);
+  border-color: rgba(147,197,253,.45);
+}
+.post-type-badge.other {
+  color: #fca5a5;
+  background: rgba(127,29,29,.25);
+  border-color: rgba(252,165,165,.45);
+}
+
+.post-group-title {
+  margin: 18px 0 10px;
+  color: #ffdada;
+  text-shadow: 0 0 8px rgba(255,77,77,.35);
+}
+
+.post-detail { margin: 56px 0; }
+.post-detail-header h1 { margin: 8px 0; }
+.post-content { margin-top: 16px; }
+.post-nav {
+  margin-top: 22px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
