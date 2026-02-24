@@ -1,6 +1,6 @@
 ---
 title: 첫번째 글
-category: info
+categories: [info]
 published: true
 ---
 

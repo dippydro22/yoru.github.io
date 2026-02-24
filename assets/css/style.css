@@ -103,7 +103,7 @@ body {
   text-shadow: 0 0 10px rgba(59,130,246,.45);
 }
 
-.layout { display: grid; grid-template-columns: 1fr; gap: 22px; padding-bottom: 22px; }
+.layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr); gap: 22px; padding-bottom: 22px; align-items: start; }
 .post-header {
   display: flex;
   align-items: center;
@@ -198,7 +198,7 @@ body {
 
 .post-type-badge {
   display: inline-block;
-  margin-bottom: 6px;
+  margin-top: 8px;
   padding: 2px 8px;
   border-radius: 999px;
   font-size: .72rem;
@@ -220,6 +220,25 @@ body {
   color: #fca5a5;
   background: rgba(127,29,29,.25);
   border-color: rgba(252,165,165,.45);
+}
+
+
+.song-card h2 {
+  margin: 0 0 12px;
+}
+
+.song-player-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 77, 77, 0.35);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.song-player-wrap iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
 }
 
 .post-group-title {
