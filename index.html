@@ -51,7 +51,7 @@ title: YORU Dev Log
     </div>
     <ul class="post-list">
       {% for post in recent_posts limit:3 %}
-      {% assign post_type = post.category | default: post.categories | first | default: 'info' | downcase %}
+      {% assign post_type = post.categories | first | default: post.category | default: 'info' | downcase %}
       <li class="post-item">
         <a class="post-item-link" href="{{ post.url | relative_url }}">
           <time>{{ post.date | date: "%Y.%m.%d" }}</time><br />
