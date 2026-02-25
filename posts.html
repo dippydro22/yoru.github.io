@@ -11,9 +11,8 @@ title: All Posts
   <h2 class="post-group-title">Diary</h2>
   <ul class="post-list">
     {% for post in all_posts %}
-      {% assign primary_category = post.categories | first | default: post.category | default: '' | downcase %}
-      {% assign categories_text = post.categories | join: ',' | downcase %}
-      {% if primary_category == 'diary' or categories_text contains 'diary' %}
+      {% assign post_type = post.categories | first | default: post.category | default: 'other' | downcase %}
+      {% if post_type == 'diary' %}
       <li class="post-item">
         <a class="post-item-link" href="{{ post.url | relative_url }}">
           <span class="post-type-badge diary">DIARY</span>
@@ -28,9 +27,8 @@ title: All Posts
   <h2 class="post-group-title">Info</h2>
   <ul class="post-list">
     {% for post in all_posts %}
-      {% assign primary_category = post.categories | first | default: post.category | default: '' | downcase %}
-      {% assign categories_text = post.categories | join: ',' | downcase %}
-      {% if primary_category == 'info' or categories_text contains 'info' %}
+      {% assign post_type = post.categories | first | default: post.category | default: 'other' | downcase %}
+      {% if post_type == 'info' %}
       <li class="post-item">
         <a class="post-item-link" href="{{ post.url | relative_url }}">
           <span class="post-type-badge info">INFO</span>
@@ -45,10 +43,8 @@ title: All Posts
   <h2 class="post-group-title">Other</h2>
   <ul class="post-list">
     {% for post in all_posts %}
-      {% assign primary_category = post.categories | first | default: post.category | default: '' | downcase %}
-      {% assign categories_text = post.categories | join: ',' | downcase %}
-      {% unless primary_category == 'diary' or categories_text contains 'diary' %}
-      {% unless primary_category == 'info' or categories_text contains 'info' %}
+      {% assign post_type = post.categories | first | default: post.category | default: 'other' | downcase %}
+      {% unless post_type == 'diary' or post_type == 'info' %}
       <li class="post-item">
         <a class="post-item-link" href="{{ post.url | relative_url }}">
           <span class="post-type-badge other">OTHER</span>
@@ -56,7 +52,6 @@ title: All Posts
           <strong>{{ post.title }}</strong>
         </a>
       </li>
-      {% endunless %}
       {% endunless %}
     {% endfor %}
   </ul>
