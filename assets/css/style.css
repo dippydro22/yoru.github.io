@@ -63,6 +63,22 @@ body {
 }
 .hero h1 { margin: 10px 0 10px; }
 .hero p { margin: 0; }
+.side-project-button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,77,77,.65);
+  background: rgba(255,77,77,.14);
+  color: #ffe8e8;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: .2px;
+}
+.side-project-button:hover {
+  background: rgba(255,77,77,.3);
+  box-shadow: 0 0 12px rgba(255,77,77,.4);
+}
 .hero-career,
 .hero-stack {
   margin: 0;
