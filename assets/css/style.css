@@ -63,6 +63,22 @@ body {
 }
 .hero h1 { margin: 10px 0 10px; }
 .hero p { margin: 0; }
+.side-project-button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,77,77,.65);
+  background: rgba(255,77,77,.14);
+  color: #ffe8e8;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: .2px;
+}
+.side-project-button:hover {
+  background: rgba(255,77,77,.3);
+  box-shadow: 0 0 12px rgba(255,77,77,.4);
+}
 .hero-career,
 .hero-stack {
   margin: 0;
@@ -104,6 +120,9 @@ body {
 }
 
 .layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr); gap: 22px; padding-bottom: 22px; align-items: start; }
+.post-card { grid-column: 1; grid-row: 1 / span 2; }
+.side-project-card { grid-column: 2; grid-row: 1; }
+.song-card { grid-column: 2; grid-row: 2; }
 .post-header {
   display: flex;
   align-items: center;
@@ -138,6 +157,32 @@ body {
   padding: 12px;
 }
 .post-item-link strong { color: #fff; }
+
+.side-project-card h2 { margin: 0; }
+.project-list-title {
+  color: #ffdada;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(255,77,77,.3);
+}
+
+.side-project-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px; }
+.side-project-item { list-style: none; }
+.side-project-item-link {
+  display: block;
+  border: 1px solid rgba(255,120,120,.5);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, rgba(255,77,77,.24), rgba(127,29,29,.35));
+  color: #fff4f4;
+  font-weight: 800;
+  text-decoration: none;
+  text-shadow: 0 0 8px rgba(255,190,190,.35);
+}
+.side-project-item-link:hover {
+  background: linear-gradient(135deg, rgba(255,77,77,.34), rgba(127,29,29,.45));
+  box-shadow: 0 0 14px rgba(255,77,77,.4);
+}
 
 .notion-link-card {
   margin-top: 14px; display: block; text-decoration: none;
@@ -178,7 +223,7 @@ body {
 .posts-page h1 { margin-top: 0; }
 .back-link { display: inline-block; margin-top: 14px; color: #ffc9c9; text-decoration: none; }
 
-@media (max-width:860px){ .layout{ grid-template-columns:1fr; } .hero-grid{ grid-template-columns:1fr; } .profile-image{ width:56px; height:56px; } }
+@media (max-width:860px){ .layout{ grid-template-columns:1fr; } .post-card, .side-project-card, .song-card { grid-column: auto; grid-row: auto; } .hero-grid{ grid-template-columns:1fr; } .profile-image{ width:56px; height:56px; } }
 
 
 .career-item {
