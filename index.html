@@ -43,7 +43,7 @@ title: YORU Dev Log
 </section>
 
 <section class="layout">
-  <article class="card">
+  <article class="card post-card">
     {% assign recent_posts = site.posts | sort: "date" | reverse %}
     <div class="post-header">
       <h2>POST</h2>
@@ -63,6 +63,15 @@ title: YORU Dev Log
       {% if recent_posts.size == 0 %}
       <li class="post-item">아직 등록된 포스트가 없습니다. `_posts/YYYY-MM-DD-title.md` 형식으로 추가해보세요.</li>
       {% endif %}
+    </ul>
+  </article>
+
+  <article class="card side-project-card">
+    <h2 class="project-list-title">ProjectList</h2>
+    <ul class="side-project-list">
+      <li class="side-project-item">
+        <a class="side-project-item-link" href="https://eternal-return-search.vercel.app/" target="_blank" rel="noopener noreferrer">이터널리턴 전적검색 사이트</a>
+      </li>
     </ul>
   </article>
 
