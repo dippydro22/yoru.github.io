@@ -216,6 +216,17 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.fx-kakao {
+  color: #ffe066;
+  font-weight: 900;
+  letter-spacing: .2px;
+  text-shadow: 0 0 12px rgba(255, 224, 102, 0.8), 0 0 20px rgba(255, 212, 59, 0.65);
+  background: linear-gradient(90deg, #fff176, #ffe066 45%, #ffd43b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 
 .posts-page { margin: 56px 0; }
