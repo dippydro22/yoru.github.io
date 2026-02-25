@@ -139,6 +139,32 @@ body {
 }
 .post-item-link strong { color: #fff; }
 
+.side-project-card h2 { margin: 0; }
+.project-list-title {
+  color: #ffdada;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(255,77,77,.3);
+}
+
+.side-project-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px; }
+.side-project-item { list-style: none; }
+.side-project-item-link {
+  display: block;
+  border: 1px solid rgba(255,120,120,.5);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, rgba(255,77,77,.24), rgba(127,29,29,.35));
+  color: #fff4f4;
+  font-weight: 800;
+  text-decoration: none;
+  text-shadow: 0 0 8px rgba(255,190,190,.35);
+}
+.side-project-item-link:hover {
+  background: linear-gradient(135deg, rgba(255,77,77,.34), rgba(127,29,29,.45));
+  box-shadow: 0 0 14px rgba(255,77,77,.4);
+}
+
 .notion-link-card {
   margin-top: 14px; display: block; text-decoration: none;
   border-radius: 12px; border: 1px solid rgba(255,77,77,.45);
